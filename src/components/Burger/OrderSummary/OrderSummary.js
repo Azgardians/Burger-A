@@ -6,9 +6,9 @@ import Aux from "../../../Hoc/Aux"
 class OrderSummary extends Component{
 
 
-    componentWillUpdate(){
-        console.log("WillUpdate");
-    }
+    // componentWillUpdate(){
+    //     console.log("WillUpdate");
+    // }
     render(){
         const ingredientSummary = Object.keys(this.props.ingredients)
         .map(igkey => {

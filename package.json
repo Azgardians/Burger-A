@@ -2,8 +2,10 @@
   "name": "burger",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://azgardians.github.io/Burger-A",
   "dependencies": {
     "autoprefixer": "7.1.6",
+    "axios": "^0.19.2",
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
@@ -48,7 +50,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "deploy": "gh-pages -d dist"
   },
   "jest": {
     "collectCoverageFrom": [

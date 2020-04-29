@@ -9,9 +9,9 @@
 /* .Burger::-webkit-scrollbar {
     display: none;
 } */
-p{
+/* p{
     margin-left: 90px;
-}
+} */
 
 @media (min-width:500px) and (min-height:400px){
     .Burger{
