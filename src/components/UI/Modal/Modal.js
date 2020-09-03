@@ -1,22 +1,24 @@
-import React , {Component}from 'react';
+import React, { Component } from 'react';
 
-import Aux from '../../../Hoc/Aux';
-import classes from "./Modal.css";
-import Backdrop from "../Backdrop/Backdrop";
-class Modal extends Component{
+import classes from './Modal.css';
+import Aux from '../../../hoc/Aux/Aux';
+import Backdrop from '../Backdrop/Backdrop';
 
-    shouldComponentUpdate(nextProps , nextState){
+class Modal extends Component {
+
+    shouldComponentUpdate ( nextProps, nextState ) {
         return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
     }
-    // componentWillUpdate(){
-    //     console.log("[Modal] updated");
-    // }
-    render (){
-        return(
+
+    componentWillUpdate () {
+        console.log('[Modal] WillUpdate');
+    }
+
+    render () {
+        return (
             <Aux>
-                <Backdrop show={this.props.show} clicked={this.props.modalClosed}/>
-                
-                <div 
+                <Backdrop show={this.props.show} clicked={this.props.modalClosed} />
+                <div
                     className={classes.Modal}
                     style={{
                         transform: this.props.show ? 'translateY(0)' : 'translateY(-100vh)',
@@ -25,8 +27,8 @@ class Modal extends Component{
                     {this.props.children}
                 </div>
             </Aux>
-        );
-    };
-} 
+        )
+    }
+}
 
-export default Modal ;
+export default Modal;
